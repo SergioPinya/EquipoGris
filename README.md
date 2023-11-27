@@ -1,1 +1,1 @@
-# EquipoGris
+# Proyecto con nombre por decidir
