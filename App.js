@@ -1,36 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./src/screens/Home";
 
-import React from 'react';
-import {
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import { Button } from 'react-native-paper';
-
-const  App = () => {
-  return (
-    <View>
-      <StatusBar/>
-      <Text style={stils.sectionTitle}>Holi </Text>
-      <Button icon='camera' >Polsa ací</Button>
-    </View>
-  );
-}
-
-const stils = StyleSheet.create({
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-
-});
-
+const Tab = createBottomTabNavigator();
+const App = () => (
+  <NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home} />
+      
+    </Tab.Navigator>
+  </NavigationContainer>
+);
 export default App;
